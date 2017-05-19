@@ -5,7 +5,6 @@ require_dependency 'landable/author'
 module Landable
   class ApiController < ApplicationController
     # skip any of these that may have been inherited from ::ApplicationController
-    skip_before_filter :protect_from_forgery
     skip_before_action :verify_authenticity_token
 
     # tracking is not necessary for API calls
